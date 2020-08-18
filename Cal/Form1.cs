@@ -82,6 +82,7 @@ namespace Cal
             }
 
             results = Double.Parse(screen.Text);
+            operations = "";
             show.Text = "";
         }
 
