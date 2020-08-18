@@ -10,5 +10,6 @@ namespace Libraries
         public double Division(double a, double b);
         public double Subtraction(double a, double b);
         public double Addition(double a, double b);
+        public string Equall(double a, double b, string c);
     }
 }

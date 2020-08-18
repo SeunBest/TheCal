@@ -42,29 +42,30 @@ namespace Cal
         private void arithmetics(object sender, EventArgs e)
         {
             Button op = (Button)sender;
-            if (results != 0)
+            if (results != 0 && !value)
             {
                 eqBtn.PerformClick();
                 operations = op.Text;
                 //results = Double.Parse(screen.Text);
-                // screen.Text = "";
+                //screen.Text = "";
                 show.Text = results + " " + operations;
                 value = true;
             }
-            else
-            {
+            
                 operations = op.Text;
                 results = Double.Parse(screen.Text);
                 //screen.Text = "";
                 show.Text = results + " " + operations;
                 value = true;
-            }
+            
         }
 
         private void eqBtn_Click(object sender, EventArgs e)
         {
             double newFeed = Double.Parse(screen.Text);
-            if (operations == "+")
+
+            screen.Text = Calc.Equall(results, newFeed, operations);
+           /* if (operations == "+")
             {
                 screen.Text = Calc.Addition(results, newFeed).ToString();
             }
@@ -79,7 +80,7 @@ namespace Cal
             else if (operations == "/")
             {
                 screen.Text = Calc.Division(results, newFeed).ToString();
-            }
+            }*/
 
             results = Double.Parse(screen.Text);
             operations = "";
@@ -91,6 +92,13 @@ namespace Cal
             screen.Text = "0";
             results = 0;
             show.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double num = Double.Parse(screen.Text);
+            num *= -1;
+            screen.Text = num.ToString();
         }
     }
 }

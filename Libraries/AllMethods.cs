@@ -23,5 +23,27 @@ namespace Libraries
         {
             return numOne / numTwo;
         }
+
+        public string Equall(double first, double second, string opera)
+        {
+            string ret = "";
+            if (opera == "+")
+            {
+                 ret = Addition(first, second).ToString();
+            }
+            else if (opera== "-")
+            {
+                  ret = Subtraction(first, second).ToString();
+            }
+            else if (opera == "X")
+            {
+                  ret = Multiplication(first, second).ToString();
+            }
+            else if (opera == "/")
+            {
+                  ret = Division(first, second).ToString();
+            }
+            return ret;
+        }
     }
 }

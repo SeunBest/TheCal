@@ -30,5 +30,33 @@ namespace CalcTests
             //Assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+        [Test]
+        public void SubtractionTest()
+        {
+            //Arrange
+            AllMethods tes = new AllMethods();
+
+            //Act
+            double actual = tes.Subtraction(x, y);
+            double expected = 5;
+
+            //Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void MultiplicationTest()
+        {
+            //Arrange
+            AllMethods tes = new AllMethods();
+
+            //Act
+            double actual = tes.Multiplication(x, y);
+            double expected = 300;
+
+            //Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
