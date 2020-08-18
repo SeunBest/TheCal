@@ -52,37 +52,51 @@ namespace Cal
                 value = true;
             }
             
-                operations = op.Text;
+            operations = op.Text;
+            double dou;
+            if (Double.TryParse(screen.Text, out dou))
+            {
                 results = Double.Parse(screen.Text);
-                //screen.Text = "";
-                show.Text = results + " " + operations;
+            }
+            //screen.Text = "";
+            show.Text = results + " " + operations;
                 value = true;
             
         }
 
         private void eqBtn_Click(object sender, EventArgs e)
         {
-            double newFeed = Double.Parse(screen.Text);
-
+            double d;
+            double newFeed;
+            
+            if (Double.TryParse(screen.Text, out d))
+            {
+                Double.Parse(screen.Text);
+            }
+            //double newFeed = Double.Parse(screen.Text);
+            newFeed = d;
             screen.Text = Calc.Equall(results, newFeed, operations);
-           /* if (operations == "+")
-            {
-                screen.Text = Calc.Addition(results, newFeed).ToString();
+            /* if (operations == "+")
+             {
+                 screen.Text = Calc.Addition(results, newFeed).ToString();
+             }
+             else if (operations == "-")
+             {
+                 screen.Text = Calc.Subtraction(results, newFeed).ToString();
+             }
+             else if (operations == "X")
+             {
+                 screen.Text = Calc.Multiplication(results, newFeed).ToString();
+             }
+             else if (operations == "/")
+             {
+                 screen.Text = Calc.Division(results, newFeed).ToString();
+             }*/
+            double doe;
+            if (Double.TryParse(screen.Text, out doe)) {
+                results = Double.Parse(screen.Text);
             }
-            else if (operations == "-")
-            {
-                screen.Text = Calc.Subtraction(results, newFeed).ToString();
-            }
-            else if (operations == "X")
-            {
-                screen.Text = Calc.Multiplication(results, newFeed).ToString();
-            }
-            else if (operations == "/")
-            {
-                screen.Text = Calc.Division(results, newFeed).ToString();
-            }*/
-
-            results = Double.Parse(screen.Text);
+            
             operations = "";
             show.Text = "";
         }
