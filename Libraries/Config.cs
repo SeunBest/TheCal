@@ -6,7 +6,7 @@ namespace Libraries
 {
     public static class Config
     {
-        public static AllMethods calc => new AllMethods();
+        public static ICalc calc => new AllMethods();
     }
 }
 

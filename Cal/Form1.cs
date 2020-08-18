@@ -16,8 +16,8 @@ namespace Cal
         public Double results = 0;
         public String operations = "";
         bool value = false;
-        AllMethods Calc;
-        public Form1(AllMethods calc)
+        ICalc Calc;
+        public Form1(ICalc calc)
         {
             InitializeComponent();
             Calc = calc;
