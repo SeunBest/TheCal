@@ -1,5 +1,6 @@
 using Libraries;
 using NUnit.Framework;
+using System;
 using System.Security.Cryptography.X509Certificates;
 
 namespace CalcTests
@@ -58,5 +59,32 @@ namespace CalcTests
             //Assert
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+        [Test]
+        public void DivideByZeroTest()
+        {
+            //Arrange
+            AllMethods tes = new AllMethods();
+
+            //Act
+            //Assert
+            Assert.That(() => tes.Division(x, z), Throws.TypeOf<DivideByZeroException>());
+        }
+
+        [Test]
+        public void DivisionTest()
+        {
+            //Arrange
+            y = 2;
+            AllMethods tes = new AllMethods();
+
+            //Act
+            double actual = tes.Division(x, y);
+            double expected = 10;
+
+            //Assert
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
     }
 }

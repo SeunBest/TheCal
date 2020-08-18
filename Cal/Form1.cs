@@ -73,25 +73,17 @@ namespace Cal
             {
                 Double.Parse(screen.Text);
             }
-            //double newFeed = Double.Parse(screen.Text);
-            newFeed = d;
-            screen.Text = Calc.Equall(results, newFeed, operations);
-            /* if (operations == "+")
-             {
-                 screen.Text = Calc.Addition(results, newFeed).ToString();
-             }
-             else if (operations == "-")
-             {
-                 screen.Text = Calc.Subtraction(results, newFeed).ToString();
-             }
-             else if (operations == "X")
-             {
-                 screen.Text = Calc.Multiplication(results, newFeed).ToString();
-             }
-             else if (operations == "/")
-             {
-                 screen.Text = Calc.Division(results, newFeed).ToString();
-             }*/
+
+            try 
+            {
+                newFeed = d;
+                screen.Text = Calc.Equall(results, newFeed, operations);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             double doe;
             if (Double.TryParse(screen.Text, out doe)) {
                 results = Double.Parse(screen.Text);

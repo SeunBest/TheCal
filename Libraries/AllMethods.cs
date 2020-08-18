@@ -21,6 +21,10 @@ namespace Libraries
 
         public double Division(double numOne, double numTwo)
         {
+            if(numTwo == 0)
+            {
+                throw new DivideByZeroException("You can not divide by zero");
+            }
             return numOne / numTwo;
         }
 
