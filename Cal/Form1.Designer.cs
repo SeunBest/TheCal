@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.screen = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -50,15 +50,15 @@
             this.button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // screen
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 41);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.screen.Location = new System.Drawing.Point(22, 12);
+            this.screen.Multiline = true;
+            this.screen.Name = "screen";
+            this.screen.Size = new System.Drawing.Size(286, 41);
+            this.screen.TabIndex = 0;
+            this.screen.Text = "0";
+            this.screen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button2
             // 
@@ -69,7 +69,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 62);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "CLR";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -275,6 +275,7 @@
             this.button.TabIndex = 1;
             this.button.Text = "0";
             this.button.UseVisualStyleBackColor = false;
+            this.button.Click += new System.EventHandler(this.btnClick);
             // 
             // Form1
             // 
@@ -300,7 +301,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.screen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -314,7 +315,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox screen;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
